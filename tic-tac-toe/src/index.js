@@ -24,17 +24,17 @@ class Board extends React.Component {
   render() {
     return (
       <div>
-        <div className="board-row">
-          {this.renderSquare(0)}
-          {this.renderSquare(1)}
-          {this.renderSquare(2)}
+        <div className='board-row'>
+         {this.renderSquare(0)}
+         {this.renderSquare(1)}
+         {this.renderSquare(2)}
         </div>
-        <div className="board-row">
-          {this.renderSquare(3)}
-          {this.renderSquare(4)}
-          {this.renderSquare(5)}
+        <div className='board-row'>
+          <div className='gray'>{this.renderSquare(3)}</div>
+          <div className='gray'>{this.renderSquare(4)}</div>
+          <div className='gray'>{this.renderSquare(5)}</div>
         </div>
-        <div className="board-row">
+        <div className='board-row'>
           {this.renderSquare(6)}
           {this.renderSquare(7)}
           {this.renderSquare(8)}
@@ -65,7 +65,7 @@ class Game extends React.Component {
     if (calculateWinner(squares) || squares[i]) {
       return;
     }
-    squares[i] = this.state.xIsNext ? "X" : "O";
+    squares[i] = this.state.xIsNext ? 'X' : 'O';
     this.setState({
       history: history.concat([
         {
@@ -106,14 +106,14 @@ class Game extends React.Component {
       status = 'Next Player: ' + (this.state.xIsNext ? 'X' : 'O');
     }
     return (
-      <div className="game">
-        <div className="game-board">
+      <div className='game'>
+        <div className='game-board'>
           <Board
             squares={current.squares}
             onClick={i => this.handleClick(i)}
           />
         </div>
-        <div className="game-info">
+        <div className='game-info'>
           <div>{status}</div>
           <ol>{moves}</ol>
         </div>

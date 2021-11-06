@@ -1,5 +1,12 @@
 # Getting Started with Create React App
 
+### Note:
+
+This is from the React website, using the tutorial Tic Tac Toe game,
+with my own additions and styles. - Kyle Welsh
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
